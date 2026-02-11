@@ -18,7 +18,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 
 
 #Preprocessing
-numerical_cols = ["Maths_Marks","Physics_Marks","Chemistry_Marks","Average_Mock_Test_Marks"]
+numerical_cols = ["Maths_Marks","Physics_Marks","Chemistry_Marks"]
 categorical_cols = ['Shift_Difficulty']
 
 num_preprocessor=Pipeline(steps=[('scaler',StandardScaler())])
