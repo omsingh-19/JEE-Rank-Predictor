@@ -69,8 +69,8 @@ rmse_rank = np.sqrt(mean_squared_error(
     y_test["Predicted_Rank"], y_pred[:,0]
 ))
 
-print(rmse_percentile, rmse_rank)
-
+print("Mean Rank Error",rmse_rank)
+print("Mean Percentile Error",rmse_percentile)
 
 #Saving model
 joblib.dump(cv_pipeline,"model/Final_Model.pkl")
