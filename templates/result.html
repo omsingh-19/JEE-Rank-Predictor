@@ -6,8 +6,9 @@
     <title>Your Result</title>
 
     <!-- using same css -->
-    <link id="theme-style" rel="stylesheet" href="light.css">
-    <script src="theme.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='light.css') }}" id="theme-style">
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
+
 </head>
 
 <body id="body">
@@ -19,14 +20,15 @@
         <h2>Your Result</h2>
 
         <p>
-            Your result will be shown here.
+            Rank: Your predicted rank is {{Rank}}
+            
         </p>
 
         <p>
-            (Calculation will be added later)
+            Percentile: Your predicted percentile is {{Percentile}}
         </p>
 
-        <a href="index.html">
+        <a href="/">
             <button>Go Back</button>
         </a>
 

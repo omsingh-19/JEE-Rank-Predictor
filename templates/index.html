@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Percentile Calculator</title>
+
+    <!-- default css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='light.css') }}" id="theme-style">
+
+    <!-- js file -->
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
+
+</head>
+
+<body id="body">
+
+    <!-- theme button -->
+    <button onclick="changeTheme()">Switch Theme</button>
+
+    <div class="container">
+
+        <h2>JEE Marks vs Rank vs Percentile</h2>
+
+        <p>Enter your marks below 👇</p>
+
+        <hr>
+
+        <h3>Subjects</h3>
+        <form action="/predict" method="POST">
+        <label>Physics</label>
+        <input type="number" name="Physics" min="-25" max="100" required>
+
+        <label>Chemistry</label>
+        <input type="number" name="Chemistry" min="-25" max="100" required>
+
+        <label>Maths</label>
+        <input type="number" name="Maths" min="-25" max="100" required>
+
+        <label>Paper Difficulty</label>
+        <select name="Paper Difficulty">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+
+
+    </div>
+
+</body>
+</html>
+
+
+    
